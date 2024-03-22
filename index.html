@@ -11,15 +11,36 @@
 </head>
 <body>
     <header>
-        <h3 class="text-3xl text-center ">Nothing to say</h3>
+        <div class="h-[700px] bg-slate-200 p-40">
+            <div class="flex justify-between">
+                <h2 class="text-2xl font-semibold">Hot Gadgets</h2>
+                <button class="btn  btn-active btn-accent text-white font-semibold">Sign in</button>
+            </div>
+            <div class="text-center w-[750px] my-12 mx-auto">
+                <h2 class="text-6xl font-bold">Apple Iphone 13 Pro Max</h2>
+                <p class="my-12 p-4 text-gray-700">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+                <button class="btn btn-active btn-accent text-white font-semibold">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Phone picture  -->
+        <div class="flex w-[65%] border border-black mx-auto ">
+            <img class="h-[400px] w-[400px]" src="image/iPhone-13-pro-max-128GB-3.jpg" alt="iphone">
+            <img class="h-[500px] w-[500px]" src="image/iPhone-13-pro-max-128GB-3.jpg" alt="iphone">
+            <img class="h-[400px] w-[400px]" src="image/iPhone-13-pro-max-128GB-3.jpg" alt="iphone">
+            
+           
+
+        </div>
     </header>
-    <main>
+    <main class="py-32">
         <!-- search section  -->
         <section>
-            <div class="w-[80%] mx-auto border border-gray-100 my-10">
+            <h1 class="text-5xl font-bold text-center">Search Your Phone</h1>
+            <div class="w-[80%] mx-auto my-10">
                 <div class="text-center">
                 <input id="Intput_text" type="text" placeholder="Search your Phone" class="input input-bordered input-success w-[500px] max-w-6xl  p-4 m-2" />
-                <button onclick="SearchText()" class="btn btn-success -ml-24 ">Success</button>
+                <button onclick="SearchText()"class="btn  btn-active btn-accent text-white font-semibold ">Search</button>
             </div>
             </div>
         </section>
@@ -40,7 +61,53 @@
         </section>
     </main>
     <footer>
+        <section class="bg-slate-200  h-[700px] relative">
+            <div class="  w-[80%] ml-52  absolute mt-40 p-10">
+                <div class=" flex justify-around my-10">
+                    <div>
+                    <h2 class="text-4xl font-semibold">Hot Gadgets</h2>
+                    <p class="font-sans">You can definitely work.</p>
+                    </div>
+                    
+                    <div class="flex justify-center gap-2">
+                        <span class="flex mb-3">
+                            <img width="mx-auto" height="mx-auto" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/>
+                            <img width="mx-auto" height="mx-auto" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/>
+                            <img width="mx-auto" height="mx-auto" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
+                        </span>
 
+                        <button class="btn btn-active btn-accent text-white font-semibold">Join Premium</button>
+
+                    </div>
+                </div>
+
+                <hr class="text-black border border-gray-500 my-16">
+
+                <div class="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ml-60  text-gray-900 font-semibold">
+                    <p>Product</p>
+                    <p>Browse jobs</p>
+                    <p>Remote jobs</p>
+                    <p>Startup jobs</p>
+                    <p>Company jobs</p>
+                    <p>Popular</p>
+                    <p>UIUX Design</p>
+                    <p>Product Design</p>
+                    <p>Back-End Developer</p>
+                    <p>Front-End Developer</p>
+                    <p>Resource</p>
+                    <p>Faq</p>
+                    <p>Support</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                    <p>Company</p>
+                    <p>About Us</p>
+                    <p>Contact Us</p>
+                    <p>Career Tips</p>
+                    <p>Careers</p>
+                </div>
+
+            </div>
+        </section>
     </footer>
 </body>
 </html>

@@ -30,3 +30,15 @@ const SearchText=()=>{
     LoadData(CatchIdValue);
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
