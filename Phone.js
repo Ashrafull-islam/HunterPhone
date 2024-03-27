@@ -17,7 +17,7 @@ const disPlayPhones= phone =>{
       Show.classList.remove("hidden");
     }
     // disply only 15 from all reseult 
-    phone=phone.slice(0,15);
+    phone=phone.slice(0,12);
      phone.forEach(Phone => {
          const div=document.createElement("div");
         div.classList=`card w-96 bg-gray-100 shadow-xl p-8`;
@@ -26,7 +26,7 @@ const disPlayPhones= phone =>{
            <h2 class="card-title">|${Phone.phone_name}</h2>
            <p>There are many variations of passages of available, but the majority have suffered</p>
            <div class="card-actions justify-center">
-             <button class="btn btn-primary">Show Details</button>
+             <button onclick="ShowModal('${Phone.slug}')" class="btn btn-primary">Show Details</button>
            </div>
          </div>`;
          CardContainer.appendChild(div);
@@ -56,14 +56,12 @@ const loadingSpinner=(isLoading)=>{
   }
 }
 
+const ShowModal=async(id)=>{
+ console.log(id);
+//  load singlephone data 
+  const response=await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+  const data=await response.json();
+  const phone=data.data;
+  
 
-
-
-
-
-
-
-
-
-
-
+}
