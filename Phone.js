@@ -6,9 +6,19 @@ const LoadData =async (phonesBrand) =>{
 }
 const disPlayPhones= phone =>{
     const CardContainer=document.getElementById("Card_container");
+    // clear the old search 
     CardContainer.innerText="";
+    // show all button hide 
+    const Show=document.getElementById("displayContainer");
+    if(phone.length<15){
+      Show.classList.add("hidden");
+    }
+    else{
+      Show.classList.remove("hidden");
+    }
+    // disply only 15 from all reseult 
+    phone=phone.slice(0,15);
      phone.forEach(Phone => {
-        
          const div=document.createElement("div");
         div.classList=`card w-96 bg-gray-100 shadow-xl p-8`;
          div.innerHTML=`<figure><img src="${Phone.image}" alt="Shoes" /></figure>
@@ -21,14 +31,29 @@ const disPlayPhones= phone =>{
          </div>`;
          CardContainer.appendChild(div);
      });
+    loadingSpinner(false);
+     
 }
 
+// Search Button
 const SearchText=()=>{
     const CatchId=document.getElementById("Intput_text");
     const CatchIdValue=CatchId.value;
     CatchId.value="";
     LoadData(CatchIdValue);
+    loadingSpinner(true);
     
+}
+
+// LoadingSpinner 
+const loadingSpinner=(isLoading)=>{
+  const Loading=document.getElementById("lodingSpinner");
+  if(isLoading){
+    Loading.classList.remove("hidden");
+  }
+  else{
+    Loading.classList.add("hidden");
+  }
 }
 
 
